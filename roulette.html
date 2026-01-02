@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>La Roulette</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="roulette.html" class="active">Jouer</a>
+            </nav>
+        </header>
+
+        <main class="jeu">
+            <!-- Affichage des portefeuilles -->
+            <div class="portefeuilles">
+                <div class="portefeuille joueur">
+                    <span>Mon argent:</span>
+                    <span id="argent-joueur">100 000 FCFA</span>
+                </div>
+                <div class="portefeuille casino">
+                    <span>Gains casino:</span>
+                    <span id="argent-casino">0 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Zone de jeu -->
+            <div class="zone-jeu">
+                <div class="roulette">
+                    <div class="indicateur">▼</div>
+                    <div class="roue" id="roue">
+                        <!-- Numeros autour de la roue -->
+                        <span class="num-roue vert" style="--i:0">0</span>
+                        <span class="num-roue rouge" style="--i:1">32</span>
+                        <span class="num-roue noir" style="--i:2">15</span>
+                        <span class="num-roue rouge" style="--i:3">19</span>
+                        <span class="num-roue noir" style="--i:4">4</span>
+                        <span class="num-roue rouge" style="--i:5">21</span>
+                        <span class="num-roue noir" style="--i:6">2</span>
+                        <span class="num-roue rouge" style="--i:7">25</span>
+                        <span class="num-roue noir" style="--i:8">17</span>
+                        <span class="num-roue rouge" style="--i:9">34</span>
+                        <span class="num-roue noir" style="--i:10">6</span>
+                        <span class="num-roue rouge" style="--i:11">27</span>
+                        <span class="num-roue noir" style="--i:12">13</span>
+                        <span class="num-roue rouge" style="--i:13">36</span>
+                        <span class="num-roue noir" style="--i:14">11</span>
+                        <span class="num-roue rouge" style="--i:15">30</span>
+                        <span class="num-roue noir" style="--i:16">8</span>
+                        <span class="num-roue rouge" style="--i:17">23</span>
+                        <span class="num-roue noir" style="--i:18">10</span>
+                        <span class="num-roue rouge" style="--i:19">5</span>
+                        <span class="num-roue noir" style="--i:20">24</span>
+                        <span class="num-roue rouge" style="--i:21">16</span>
+                        <span class="num-roue noir" style="--i:22">33</span>
+                        <span class="num-roue rouge" style="--i:23">1</span>
+                        <span class="num-roue noir" style="--i:24">20</span>
+                        <span class="num-roue rouge" style="--i:25">14</span>
+                        <span class="num-roue noir" style="--i:26">31</span>
+                        <span class="num-roue rouge" style="--i:27">9</span>
+                        <span class="num-roue noir" style="--i:28">22</span>
+                        <span class="num-roue rouge" style="--i:29">18</span>
+                        <span class="num-roue noir" style="--i:30">29</span>
+                        <span class="num-roue rouge" style="--i:31">7</span>
+                        <span class="num-roue noir" style="--i:32">28</span>
+                        <span class="num-roue rouge" style="--i:33">12</span>
+                        <span class="num-roue noir" style="--i:34">35</span>
+                        <span class="num-roue rouge" style="--i:35">3</span>
+                        <span class="num-roue noir" style="--i:36">26</span>
+                        
+                        <div class="numero-central" id="numero-tire">?</div>
+                    </div>
+                </div>
+
+                <div class="formulaire-pari">
+                    <h2>Placez votre pari</h2>
+                    
+                    <div class="champ">
+                        <label for="choix">Votre choix:</label>
+                        <select id="choix">
+                            <option value="pair">Pair</option>
+                            <option value="impair">Impair</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+
+                    <div class="champ">
+                        <label for="mise">Mise (en milliers FCFA):</label>
+                        <input type="number" id="mise" min="1" value="10">
+                    </div>
+
+                    <button id="btn-go" onclick="jouer()">Go !</button>
+                </div>
+            </div>
+
+            <!-- Resultat -->
+            <div id="resultat" class="resultat cache">
+                <p id="message-resultat"></p>
+            </div>
+
+            <!-- Historique -->
+            <div class="historique">
+                <h3>Derniers tirages</h3>
+                <div id="liste-historique"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Mini Projet JavaScript - GLTW M2</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
